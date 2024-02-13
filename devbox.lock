@@ -1,0 +1,75 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "dive@latest": {
+      "last_modified": "2024-02-05T02:15:44Z",
+      "resolved": "github:NixOS/nixpkgs/0a254180b4cad6be45aa46dce896bdb8db5d2930#dive",
+      "source": "devbox-search",
+      "version": "0.12.0",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/hf7zv9v0vvyzkrfjbpa0marxb557nj1w-dive-0.12.0"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/zsb9q91hnk9bz74fy68zg53bjg7fpfdn-dive-0.12.0"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/ywhdcd7y5vpmm9ca9n26jfm5dcaf97mj-dive-0.12.0"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/i0mwn6as83dfpxm9ns27bq5xg750w1s4-dive-0.12.0"
+        }
+      }
+    },
+    "docker@latest": {
+      "last_modified": "2024-02-01T15:59:28Z",
+      "resolved": "github:NixOS/nixpkgs/f38bca1ca559974b36863d0ff4bb710b7bc12890#docker",
+      "source": "devbox-search",
+      "version": "24.0.5",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/wvqrlsfz745bywbgj6bhxfw2w03hhdph-docker-24.0.5"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/gjrr632msishzzbrjkqpf3qfpyixv8q8-docker-24.0.5"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/92xla9kyppim4m17qa2kbilswb1mlsma-docker-24.0.5"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/7m4cfqi3g5lpr4ymc6z1cqfxcfcwa6a9-docker-24.0.5"
+        }
+      }
+    },
+    "gradle": {
+      "plugin_version": "0.0.1",
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#gradle",
+      "source": "nixpkg"
+    },
+    "jetbrains.idea-community@latest": {
+      "last_modified": "2024-01-27T14:55:31Z",
+      "resolved": "github:NixOS/nixpkgs/160b762eda6d139ac10ae081f8f78d640dd523eb#jetbrains.idea-community",
+      "source": "devbox-search",
+      "version": "2023.3.2",
+      "systems": {
+        "x86_64-linux": {
+          "store_path": "/nix/store/fqmm97zsq75qfmff1vk45nmd5ybvw9r6-idea-community-2023.3.2"
+        }
+      }
+    },
+    "temurin-bin-21@latest": {
+      "last_modified": "2024-01-27T14:55:31Z",
+      "resolved": "github:NixOS/nixpkgs/160b762eda6d139ac10ae081f8f78d640dd523eb#temurin-bin-21",
+      "source": "devbox-search",
+      "version": "21.0.1",
+      "systems": {
+        "aarch64-linux": {
+          "store_path": "/nix/store/sf339x4bxqxsbvjf381fpam57bwikwbx-temurin-bin-21.0.1"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/7zl6g4njcgqmj39xc757xj7znxs55bf2-temurin-bin-21.0.1"
+        }
+      }
+    }
+  }
+}

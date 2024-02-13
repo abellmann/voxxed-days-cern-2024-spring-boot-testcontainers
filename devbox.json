@@ -1,0 +1,19 @@
+{
+  "packages": [
+    "temurin-bin-21@latest",
+    "gradle",
+    "jetbrains.idea-community@latest",
+    "docker@latest",
+    "dive@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}
