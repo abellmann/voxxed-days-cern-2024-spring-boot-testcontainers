@@ -46,6 +46,26 @@
       "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#gradle",
       "source": "nixpkg"
     },
+    "httpie@latest": {
+      "last_modified": "2024-01-27T14:55:31Z",
+      "resolved": "github:NixOS/nixpkgs/160b762eda6d139ac10ae081f8f78d640dd523eb#httpie",
+      "source": "devbox-search",
+      "version": "3.2.2",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/nf5zhvqy940zxd841w08nr1nwh2lhq5v-python3.11-httpie-3.2.2"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/rfzgp6h2m5bz8f5phssil1d9pi9gpp4a-python3.11-httpie-3.2.2"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/1q6rms6rh0irs2ghffbqyhcwd67rrzn7-python3.11-httpie-3.2.2"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/qhz6b8nasc0ppkxsg5a3d3xaihld5qn4-python3.11-httpie-3.2.2"
+        }
+      }
+    },
     "jetbrains.idea-community@latest": {
       "last_modified": "2024-01-27T14:55:31Z",
       "resolved": "github:NixOS/nixpkgs/160b762eda6d139ac10ae081f8f78d640dd523eb#jetbrains.idea-community",
