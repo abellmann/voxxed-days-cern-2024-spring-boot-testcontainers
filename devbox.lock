@@ -90,6 +90,26 @@
           "store_path": "/nix/store/7zl6g4njcgqmj39xc757xj7znxs55bf2-temurin-bin-21.0.1"
         }
       }
+    },
+    "tilt@latest": {
+      "last_modified": "2024-02-01T15:59:28Z",
+      "resolved": "github:NixOS/nixpkgs/f38bca1ca559974b36863d0ff4bb710b7bc12890#tilt",
+      "source": "devbox-search",
+      "version": "0.33.10",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/3kx7qf8fr1qx5f3xqwd9m3c97ky9bg7l-tilt-0.33.10"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/cfkb2b5ai8j1p97rhiq2xin7zf79q27j-tilt-0.33.10"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/k3hxhsdfz1r604pwsh7c5jx6p8hnh1v3-tilt-0.33.10"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/bv6p06cdr0bcg2x5lp0v0sg53lynm4h5-tilt-0.33.10"
+        }
+      }
     }
   }
 }

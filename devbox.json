@@ -5,7 +5,8 @@
     "jetbrains.idea-community@latest",
     "docker@latest",
     "dive@latest",
-    "httpie@latest"
+    "httpie@latest",
+    "tilt@latest"
   ],
   "shell": {
     "init_hook": [
@@ -15,7 +16,6 @@
       "# see https://java.testcontainers.org/supported_docker_environment/#colima",
       "export TESTCONTAINERS_HOST_OVERRIDE=$(rdctl shell ip a show rd0 | awk '/inet / {sub(\"/.*\",\"\"); print $2}')",
       "echo TESTCONTAINERS_HOST_OVERRIDE=${TESTCONTAINERS_HOST_OVERRIDE}"
-
     ],
     "scripts": {
       "test": [
