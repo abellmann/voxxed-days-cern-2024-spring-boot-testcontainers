@@ -6,7 +6,10 @@
     "docker@latest",
     "dive@latest",
     "httpie@latest",
-    "tilt@latest"
+    "tilt@latest",
+    "kn@latest",
+    "jq@latest",
+    "cosign@latest"
   ],
   "shell": {
     "init_hook": [

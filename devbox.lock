@@ -1,6 +1,26 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "cosign@latest": {
+      "last_modified": "2024-02-01T15:59:28Z",
+      "resolved": "github:NixOS/nixpkgs/f38bca1ca559974b36863d0ff4bb710b7bc12890#cosign",
+      "source": "devbox-search",
+      "version": "2.2.3",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/jk7grpsajq16y0zyqc6v4c8xspzdrf27-cosign-2.2.3"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/2baqdwwhpxi8h55fc7ln2vkxyi3ap8xk-cosign-2.2.3"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/aw6q6yrq0c5rcpihxv8jxq7c9qkn5j8n-cosign-2.2.3"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/khnjms2d4bppnsn1pcj4nzv7c0yjvnf7-cosign-2.2.3"
+        }
+      }
+    },
     "dive@latest": {
       "last_modified": "2024-02-05T02:15:44Z",
       "resolved": "github:NixOS/nixpkgs/0a254180b4cad6be45aa46dce896bdb8db5d2930#dive",
@@ -74,6 +94,46 @@
       "systems": {
         "x86_64-linux": {
           "store_path": "/nix/store/fqmm97zsq75qfmff1vk45nmd5ybvw9r6-idea-community-2023.3.2"
+        }
+      }
+    },
+    "jq@latest": {
+      "last_modified": "2024-02-06T07:51:56Z",
+      "resolved": "github:NixOS/nixpkgs/8cc79aa39bbc6eaedaf286ae655b224c71e02907#jq",
+      "source": "devbox-search",
+      "version": "1.7.1",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/krjssadaqd0yap4aqivw1g44qagsbkw9-jq-1.7.1-bin"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/bw4jrkpyzznafspd3dgz8l57zq3qnjl1-jq-1.7.1-bin"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/r1q3ym6cxlhli7pzf8brm8h1m9x3pvx0-jq-1.7.1-bin"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/43x59xa6fidzd9jys7jvhv66bjfjm4cp-jq-1.7.1-bin"
+        }
+      }
+    },
+    "kn@latest": {
+      "last_modified": "2024-01-27T14:55:31Z",
+      "resolved": "github:NixOS/nixpkgs/160b762eda6d139ac10ae081f8f78d640dd523eb#kn",
+      "source": "devbox-search",
+      "version": "1.13.0",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/q7nw04zwf6bb66mpxg9ld12mp95kpfc1-kn-1.13.0"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/b65s13gl8s46zfj6rvcc4kgdcqpjcm41-kn-1.13.0"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/qy31vxxsl4x3dkwd8lh576pygdiz8j7z-kn-1.13.0"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/6nqfkryjnzjdsczs8qcwa99kcmch1i2x-kn-1.13.0"
         }
       }
     },
