@@ -53,7 +53,7 @@ dependencyManagement {
 }
 
 jib.from.image ="eclipse-temurin:21-jre"
-jib.to.image = "abellmann/spring-boot-testcontainers"
+jib.to.image = "spring-boot-testcontainers"
 
 tasks.named('test') {
   useJUnitPlatform()

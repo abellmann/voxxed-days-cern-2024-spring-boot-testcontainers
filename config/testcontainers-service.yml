@@ -2,11 +2,17 @@ apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   name: testcontainers-service
+  namespace: testcontainers
 spec:
   template:
     spec:
+      metadata:
+        annotations:
+          # use autoscaling based on cpu resources
+          # do not scale down to 0
+          autoscaling.knative.dev/class: "hpa.autoscaling.knative.dev"
       containers:
         - name: testcontainers-service
-          image: abellmann/spring-boot-testcontainers
+          image: spring-boot-testcontainers
           ports:
             - containerPort: 8080

@@ -21,9 +21,11 @@ load('ext://knative', 'knative_yaml')
 
 # custom build with paketo
 custom_build(
-  'abellmann/spring-boot-testcontainers',
+  'spring-boot-testcontainers',
   './gradlew bootBuildImage --imageName $EXPECTED_REF',
   deps=['src'])
+
+k8s_yaml(['config/namespace.yml', ])
 
 knative_yaml('config/kafka-service.yml')
 knative_yaml('config/postgresql-service.yml')

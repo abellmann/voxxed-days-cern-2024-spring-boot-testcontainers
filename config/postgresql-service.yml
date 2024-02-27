@@ -2,9 +2,15 @@ apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   name: postgresql
+  namespace: testcontainers
 spec:
   template:
     spec:
+      metadata:
+        annotations:
+          # use autoscaling based on cpu resources
+          # do not scale down to 0
+          autoscaling.knative.dev/class: "hpa.autoscaling.knative.dev"
       containers:
         - name: postgresql
           image: postgres:16.1
