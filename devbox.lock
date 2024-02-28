@@ -61,6 +61,26 @@
         }
       }
     },
+    "fzf@latest": {
+      "last_modified": "2024-02-26T19:46:43Z",
+      "resolved": "github:NixOS/nixpkgs/548a86b335d7ecd8b57ec617781f5e652ab0c38e#fzf",
+      "source": "devbox-search",
+      "version": "0.46.1",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/0xsj4dagk96gr4jws3z1qw37hrb58mxr-fzf-0.46.1"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/ikji6rcxav7njzgv1v69xhdb5niisnh3-fzf-0.46.1"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/fnv64cps9q5kaijzjcc64j7yiyiv6mc6-fzf-0.46.1"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/38gcnaa4jk6c0f9s9bbfcrzh4xp8wrhz-fzf-0.46.1"
+        }
+      }
+    },
     "gradle": {
       "plugin_version": "0.0.1",
       "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#gradle",
@@ -117,6 +137,26 @@
         }
       }
     },
+    "k9s@latest": {
+      "last_modified": "2024-02-26T19:46:43Z",
+      "resolved": "github:NixOS/nixpkgs/548a86b335d7ecd8b57ec617781f5e652ab0c38e#k9s",
+      "source": "devbox-search",
+      "version": "0.31.9",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/0qkrm5y6z5vz605y60jv4gg2gx6axfry-k9s-0.31.9"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/n6gh7rpac91c01jz0c7vzhswlh92v33p-k9s-0.31.9"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/wywn4q13kcd1ymrpm277dbjch4zf9rkn-k9s-0.31.9"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/km2ac176jb7yg8ib4qanzmpjj6drb0rh-k9s-0.31.9"
+        }
+      }
+    },
     "kn@latest": {
       "last_modified": "2024-01-27T14:55:31Z",
       "resolved": "github:NixOS/nixpkgs/160b762eda6d139ac10ae081f8f78d640dd523eb#kn",
@@ -134,6 +174,26 @@
         },
         "x86_64-linux": {
           "store_path": "/nix/store/6nqfkryjnzjdsczs8qcwa99kcmch1i2x-kn-1.13.0"
+        }
+      }
+    },
+    "krew@latest": {
+      "last_modified": "2024-02-26T19:46:43Z",
+      "resolved": "github:NixOS/nixpkgs/548a86b335d7ecd8b57ec617781f5e652ab0c38e#krew",
+      "source": "devbox-search",
+      "version": "0.4.4",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/l2y6gad42916a1za47pjrjb7982ygl90-krew-0.4.4"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/ygl6xfw00j8pmf6gflsqy848n50jh66a-krew-0.4.4"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/01vyv5g8n36yq7p70vx2qsaav3yn3biy-krew-0.4.4"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/1i05dnb7v1fhnjiy7an2prgca1ai37c8-krew-0.4.4"
         }
       }
     },

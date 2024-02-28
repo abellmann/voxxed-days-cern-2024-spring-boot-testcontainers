@@ -9,7 +9,10 @@
     "tilt@latest",
     "kn@latest",
     "jq@latest",
-    "cosign@latest"
+    "cosign@latest",
+    "k9s@latest",
+    "krew@latest",
+    "fzf@latest"
   ],
   "shell": {
     "init_hook": [
@@ -18,7 +21,14 @@
       "# testcontainer unit tests",
       "# see https://java.testcontainers.org/supported_docker_environment/#colima",
       "export TESTCONTAINERS_HOST_OVERRIDE=$(rdctl shell ip a show rd0 | awk '/inet / {sub(\"/.*\",\"\"); print $2}')",
-      "echo TESTCONTAINERS_HOST_OVERRIDE=${TESTCONTAINERS_HOST_OVERRIDE}"
+      "echo TESTCONTAINERS_HOST_OVERRIDE=${TESTCONTAINERS_HOST_OVERRIDE}",
+      "# install kubectx and kubens as plugins for kubectl",
+      "export PATH=\"${KREW_ROOT:-$HOME/.krew}/bin:$PATH\"",
+      "krew install ctx",
+      "krew install ns",
+      "# autocompletion for kubectl",
+      "source <(kubectl completion zsh)"
+
     ],
     "scripts": {
       "test": [
