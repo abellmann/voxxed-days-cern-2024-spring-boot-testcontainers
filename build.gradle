@@ -58,3 +58,16 @@ jib.to.image = "spring-boot-testcontainers"
 tasks.named('test') {
   useJUnitPlatform()
 }
+
+tasks.named('bootBuildImage') {
+  if (System.getProperty( "os.arch" ).toLowerCase().startsWith('aarch')) {
+    // This builder is only for ARM64 systems.
+    // For more info: https://github.com/dashaun/paketo-arm64
+    builder = "docker.io/dashaun/builder:base"
+  } else {
+    builder = "docker.io/paketobuildpacks/builder-jammy-base"
+  }
+
+  imageName = "spring-boot-testcontainers"
+  environment = ["BP_LIVE_RELOAD_ENABLED": "true"]
+}
