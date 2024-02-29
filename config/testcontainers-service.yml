@@ -13,6 +13,6 @@ spec:
           autoscaling.knative.dev/class: "hpa.autoscaling.knative.dev"
       containers:
         - name: testcontainers-service
-          image: spring-boot-testcontainers
+          image: dev.local/spring-boot-testcontainers
           ports:
             - containerPort: 8080

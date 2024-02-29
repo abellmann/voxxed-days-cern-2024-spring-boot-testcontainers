@@ -11,7 +11,7 @@ logging:
 
 spring:
   datasource:
-    url: jdbc:postgresql://postgresql:5432/voxxeddays
+    url: jdbc:postgresql://postgresql.testcontainers.svc.cluster.local:5432/voxxeddays
     username: user
     password: pass
 
