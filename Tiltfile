@@ -23,14 +23,23 @@ load('ext://knative', 'knative_yaml')
 custom_build(
   'spring-boot-testcontainers',
   './gradlew bootBuildImage --imageName $EXPECTED_REF',
-  deps=['src'])
+  deps=['src', 'build', 'config', 'config-local'],
+  # Enables live reload
+  live_update = [
+    sync('./build/classes/java/main', '/workspace/BOOT-INF/classes')
+  ])
 
 k8s_yaml(['config/namespace.yml', ])
 
 knative_yaml('config/kafka-service.yml')
 knative_yaml('config/postgresql-service.yml')
-knative_yaml('config/testcontainers-service.yml')
 knative_yaml('config/zookeeper-service.yml')
+
+# Deploy
+k8s_yaml(['config-local/deployment.yml', 'config-local/service.yml'])
+
+# Manage
+k8s_resource('spring-boot-testcontainers', port_forwards=['8080:8080', '9000:9000'])
 
 
 #k8s_resource('testcontainers-service', port_forwards=8000)
