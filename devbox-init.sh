@@ -1,5 +1,3 @@
-!#/bin/sh
-
 # required for testcontainers with java
 # without it you get connection refused for ryuk when starting
 # testcontainer unit tests
