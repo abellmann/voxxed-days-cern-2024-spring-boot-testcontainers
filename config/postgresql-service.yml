@@ -18,6 +18,8 @@ metadata:
   labels:
     app: postgres
 spec:
+  # local path requires installation of local-path provisioner
+  # see https://github.com/rancher/local-path-provisioner
   storageClassName: local-path
   accessModes:
     - ReadWriteOnce
