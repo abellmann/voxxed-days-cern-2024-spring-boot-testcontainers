@@ -32,7 +32,6 @@ custom_build(
 k8s_yaml(['config/namespace.yml', 'config/postgresql-service.yml'])
 
 knative_yaml('config/kafka-service.yml')
-knative_yaml('config/zookeeper-service.yml')
 knative_yaml('config/testcontainers-service.yml')
 
 # Deploy
