@@ -31,7 +31,8 @@ custom_build(
 
 k8s_custom_deploy(
   name='strimzi-kafka-operator',
-  apply_cmd='./config/install-strimiz-operator.sh',
+  deps=[],
+  apply_cmd='./config/install-strimzi-operator.sh',
   delete_cmd='./config/teardown-strimzi-operator.sh')
 
 k8s_yaml(['config/namespace.yml', 'config/postgresql-service.yml'])
