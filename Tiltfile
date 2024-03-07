@@ -29,6 +29,11 @@ custom_build(
     sync('./build/classes/java/main', '/workspace/BOOT-INF/classes')
   ])
 
+k8s_custom_deploy(
+  name='strimzi-kafka-operator',
+  apply_cmd='./config/install-strimiz-operator.sh',
+  delete_cmd='./config/teardown-strimzi-operator.sh')
+
 k8s_yaml(['config/namespace.yml', 'config/postgresql-service.yml'])
 
 knative_yaml('config/kafka-service.yml')
