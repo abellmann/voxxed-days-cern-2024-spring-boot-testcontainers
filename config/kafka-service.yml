@@ -1,27 +1,40 @@
-apiVersion: serving.knative.dev/v1
-kind: Service
+apiVersion: kafka.strimzi.io/v1beta2
+kind: Kafka
 metadata:
-  name: kafka
-  namespace: testcontainers
+  name: my-cluster
 spec:
-  template:
-    spec:
-      metadata:
-        annotations:
-          # use autoscaling based on cpu resources
-          # do not scale down to 0
-          autoscaling.knative.dev/class: "hpa.autoscaling.knative.dev"
-      containers:
-        - name: kafka
-          image: confluentinc/cp-kafka:7.5.3
-          env:
-            - name: KAFKA_ZOOKEEPER_CONNECT
-              value: "zookeeper.testcontainers.svc.cluster.local:2181"
-            - name: KAFKA_ADVERTISED_LISTENERS
-              value: "PLAINTEXT://localhost:9092"
-            - name: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
-              value: "1"
-            - name: KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS
-              value: "1"
-          ports:
-            - containerPorts: 9092
+  kafka:
+    version: 3.6.1
+    replicas: 1
+    listeners:
+      - name: plain
+        port: 9092
+        type: internal
+        tls: false
+      - name: tls
+        port: 9093
+        type: internal
+        tls: true
+    config:
+      offsets.topic.replication.factor: 1
+      transaction.state.log.replication.factor: 1
+      transaction.state.log.min.isr: 1
+      default.replication.factor: 1
+      min.insync.replicas: 1
+      inter.broker.protocol.version: "3.6"
+    storage:
+      type: jbod
+      volumes:
+        - id: 0
+          type: persistent-claim
+          size: 100Gi
+          deleteClaim: false
+  zookeeper:
+    replicas: 1
+    storage:
+      type: persistent-claim
+      size: 100Gi
+      deleteClaim: false
+  entityOperator:
+    topicOperator: {}
+    userOperator: {}
