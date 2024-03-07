@@ -4,7 +4,7 @@ if [ "$0" != "$SCRIPT_PATH" ] && [ "$SCRIPT_PATH" != "" ]; then
     cd "$SCRIPT_PATH" || exit
 fi
 
-git checkout .
+git checkout strimzi-0.39.0
 kubectl create namespace kafka
 sed -i 's/namespace: .*/namespace: kafka/' strimzi-0.39.0/install/cluster-operator/*RoleBinding*.yaml
 
