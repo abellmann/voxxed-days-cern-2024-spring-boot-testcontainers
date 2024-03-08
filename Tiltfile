@@ -35,6 +35,12 @@ k8s_custom_deploy(
   apply_cmd='./config/install-strimzi-operator.sh',
   delete_cmd='./config/teardown-strimzi-operator.sh')
 
+k8s_custom_deploy(
+  name='knative-serving',
+  deps=[],
+  apply_cmd='./config/install-knative-serving.sh',
+  delete_cmd='./config/teardown-knative-serving.sh')
+
 k8s_yaml(['config/namespace.yml', 'config/postgresql-service.yml'])
 
 knative_yaml('config/kafka-service.yml')
