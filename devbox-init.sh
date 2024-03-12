@@ -9,4 +9,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 krew install ctx
 krew install ns
 # autocompletion for kubectl
+autoload -Uz compinit
+compinit
 source <(kubectl completion zsh)
