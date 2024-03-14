@@ -9,6 +9,8 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 krew install ctx
 krew install ns
 # autocompletion for kubectl
+alias psql='psql postgresql://user:pass@localhost/voxxeddays'
 autoload -Uz compinit
 compinit
 source <(kubectl completion zsh)
+
