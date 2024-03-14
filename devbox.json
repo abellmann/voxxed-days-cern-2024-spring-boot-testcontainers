@@ -12,7 +12,8 @@
     "cosign@latest",
     "k9s@latest",
     "krew@latest",
-    "fzf@latest"
+    "fzf@latest",
+    "postgresql_16@latest"
   ],
   "shell": {
     "init_hook": [

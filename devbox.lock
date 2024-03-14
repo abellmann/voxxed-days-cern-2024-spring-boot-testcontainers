@@ -197,6 +197,27 @@
         }
       }
     },
+    "postgresql_16@latest": {
+      "last_modified": "2024-03-01T02:33:49Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/244ee5631a7a39b0c6bd989cdf9a1326cd3c5819#postgresql_16",
+      "source": "devbox-search",
+      "version": "16.2",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/fp45bmz0h718whqq6mwpzfyaq3fa5a7z-postgresql-16.2"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/s2l432l5gjd3vj7b3cj6q8zgbnj9cixf-postgresql-16.2"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/xah397j0ras4iaddhmrxjrck1m1zkz2i-postgresql-16.2"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/hj8qj7whdcvpfw4hrwwjm07hxfn7narr-postgresql-16.2"
+        }
+      }
+    },
     "temurin-bin-21@latest": {
       "last_modified": "2024-01-27T14:55:31Z",
       "resolved": "github:NixOS/nixpkgs/160b762eda6d139ac10ae081f8f78d640dd523eb#temurin-bin-21",
