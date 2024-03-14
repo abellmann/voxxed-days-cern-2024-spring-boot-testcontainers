@@ -24,7 +24,7 @@ spring:
       properties.spring.json.trusted.packages: com.voxxeddays.cern
       auto-offset-reset: earliest
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-    bootstrap-servers: "kafka:9092"
+    bootstrap-servers: "my-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092"
 
 
 

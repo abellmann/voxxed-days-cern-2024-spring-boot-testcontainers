@@ -44,7 +44,8 @@ update_settings(k8s_upsert_timeout_secs=60 * 7)
 knative_install('v1.13.1')
 k8s_yaml(['config/namespace.yml', 'config/postgresql-service.yml'])
 
-knative_yaml('config/kafka-service.yml')
+k8s_yaml('config/kafka-service.yml')
+k8s_kind('Kafka')
 knative_yaml('config/testcontainers-service.yml')
 
 # Deploy
