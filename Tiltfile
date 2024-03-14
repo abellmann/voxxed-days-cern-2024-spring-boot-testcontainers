@@ -11,7 +11,7 @@ print("""
 -----------------------------------------------------------------
 """.strip())
 
-load('ext://knative', 'knative_yaml')
+load('ext://knative', 'knative_yaml', 'knative_install')
 
 # custom build with jib
 #custom_build(
@@ -35,12 +35,13 @@ k8s_custom_deploy(
   apply_cmd='./config/install-strimzi-operator.sh',
   delete_cmd='./config/teardown-strimzi-operator.sh')
 
-k8s_custom_deploy(
-  name='knative-serving',
-  deps=[],
-  apply_cmd='./config/install-knative-serving.sh',
-  delete_cmd='./config/teardown-knative-serving.sh')
+# knative extension increases default timeout to 5 mins
+# because it's slow to tear down; in CI, where we're
+# often more resource constrained, that's still too slow
+# sometimes
+update_settings(k8s_upsert_timeout_secs=60 * 7)
 
+knative_install('v1.13.1')
 k8s_yaml(['config/namespace.yml', 'config/postgresql-service.yml'])
 
 knative_yaml('config/kafka-service.yml')
