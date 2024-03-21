@@ -35,6 +35,8 @@ k8s_custom_deploy(
   apply_cmd='./config/install-strimzi-operator.sh',
   delete_cmd='./config/teardown-strimzi-operator.sh')
 
+
+
 # knative extension increases default timeout to 5 mins
 # because it's slow to tear down; in CI, where we're
 # often more resource constrained, that's still too slow
@@ -42,6 +44,14 @@ k8s_custom_deploy(
 update_settings(k8s_upsert_timeout_secs=60 * 7)
 
 knative_install('v1.13.1')
+k8s_custom_deploy(
+  name='knative-kourier',
+  deps=['knative-core'
+  ],
+  apply_cmd='./config/knative/install-kourier.sh',
+  delete_cmd='./config/knative/teardown-kourier.sh')
+
+
 k8s_yaml(['config/namespace.yml', 'config/postgresql-service.yml'])
 
 k8s_yaml('config/kafka-service.yml')
