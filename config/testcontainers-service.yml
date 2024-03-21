@@ -16,3 +16,7 @@ spec:
           image: dev.local/spring-boot-testcontainers
           ports:
             - containerPort: 8080
+#        - name: netshoot
+#          image: nicolaka/netshoot
+#          command: [ "/bin/bash" ]
+#          args: [ "-c", "while true; do ping -i 5 localhost ;done" ]
