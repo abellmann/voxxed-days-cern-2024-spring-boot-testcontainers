@@ -11,3 +11,11 @@ kubectl patch configmap/config-network \
   --type merge \
   --output yaml \
   --patch '{"data":{"ingress-class":"kourier.ingress.networking.knative.dev"}}'
+
+#kubectl patch configmap/config-domain \
+#    --namespace knative-serving \
+#    --type merge \
+#    --output yaml \
+#    --patch '{"data":{"127.0.0.1.sslip.io":""}}'
+
+
