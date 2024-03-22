@@ -5,3 +5,9 @@ if [ "$0" != "$SCRIPT_PATH" ] && [ "$SCRIPT_PATH" != "" ]; then
 fi
 
 kubectl apply -f kourier.yaml -o yaml
+
+kubectl patch configmap/config-network \
+  --namespace knative-serving \
+  --type merge \
+  --output yaml \
+  --patch '{"data":{"ingress-class":"kourier.ingress.networking.knative.dev"}}'
